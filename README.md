@@ -54,7 +54,7 @@ track-my-subs-agent/
 
 ### 1. שכפול והתקנת תלויות
 ```bash
-git clone https://github.com/YOUR_USERNAME/track-my-subs-agent.git
+git clone https://github.com/MichalZatlawi/track-my-subs-agent.git
 cd track-my-subs-agent
 pip install -r requirements.txt
 ```
