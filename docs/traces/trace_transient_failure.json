@@ -1,0 +1,142 @@
+{
+  "scenario": "transient_failure_with_recovery",
+  "timestamp_utc": "2026-11-22T17:31:00.008897+00:00",
+  "model_mode": "mock",
+  "user_id": "user_michal",
+  "thread_id": "thread_demo_transient",
+  "status": "success",
+  "steps_used": 3,
+  "max_steps": 7,
+  "events": [
+    {
+      "event": "USER_MESSAGE",
+      "step": 0,
+      "content": "הצג לי חלופות למנוי חדר הכושר שלי"
+    },
+    {
+      "event": "TOOL_REQUEST",
+      "step": 1,
+      "tool": "search_alternatives",
+      "args": {
+        "category": "fitness",
+        "current_price": 250.0,
+        "max_results": 3
+      },
+      "approved": false
+    },
+    {
+      "event": "TOOL_OBSERVATION",
+      "step": 1,
+      "tool": "search_alternatives",
+      "status": "ok",
+      "result": {
+        "status": "ok",
+        "data": {
+          "source": "internal_synthetic_catalog_v1",
+          "updated_at": "2026-11-22",
+          "category": "fitness",
+          "current_price": 250.0,
+          "alternatives": [
+            {
+              "service_name": "Profit Gym",
+              "monthly_price": 150.0,
+              "currency": "ILS",
+              "notes": "חדר כושר בפריסה ארצית ללא התחייבות",
+              "monthly_savings": 100.0,
+              "annual_savings": 1200.0
+            },
+            {
+              "service_name": "Space Gym",
+              "monthly_price": 179.0,
+              "currency": "ILS",
+              "notes": "חדר כושר וחוגים",
+              "monthly_savings": 71.0,
+              "annual_savings": 852.0
+            },
+            {
+              "service_name": "Country Club Local",
+              "monthly_price": 200.0,
+              "currency": "ILS",
+              "notes": "חדר כושר ובריכה",
+              "monthly_savings": 50.0,
+              "annual_savings": 600.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": "TOOL_REQUEST",
+      "step": 2,
+      "tool": "calculate_expenses",
+      "args": {
+        "current_prices": [
+          250.0
+        ],
+        "alternative_prices": [
+          150.0
+        ]
+      },
+      "approved": false
+    },
+    {
+      "event": "TOOL_OBSERVATION",
+      "step": 2,
+      "tool": "calculate_expenses",
+      "status": "ok",
+      "result": {
+        "status": "ok",
+        "data": {
+          "monthly_total": 250.0,
+          "annual_total": 3000.0,
+          "alternative_monthly_total": 150.0,
+          "monthly_savings": 100.0,
+          "annual_savings": 1200.0
+        }
+      }
+    },
+    {
+      "event": "FINAL_RESPONSE",
+      "step": 3,
+      "status": "success",
+      "context_messages_count": 6,
+      "text": "אתה משלם כיום 250.00 ש״ח בחודש עבור Holmes Place Gym. במקור internal_synthetic_catalog_v1 נמצאה חלופה משתלמת יותר: Profit Gym במחיר 150.00 ש״ח בחודש (חדר כושר בפריסה ארצית ללא התחייבות). מעבר יחסוך לך 100.00 ש״ח בחודש ו-1200.00 ש״ח בשנה (חושב באמצעות calculate_expenses). האם תרצה שאעדכן את רשימת המנויים שלך?"
+    }
+  ],
+  "tool_logs": [
+    {
+      "step": 1,
+      "tool": "search_alternatives",
+      "args": {
+        "category": "fitness",
+        "current_price": 250.0,
+        "max_results": 3
+      },
+      "session_user_id": "user_michal",
+      "decision": "executed",
+      "reason": "success",
+      "attempts": 3,
+      "status": "ok",
+      "latency_ms": 151.2
+    },
+    {
+      "step": 2,
+      "tool": "calculate_expenses",
+      "args": {
+        "current_prices": [
+          250.0
+        ],
+        "alternative_prices": [
+          150.0
+        ]
+      },
+      "session_user_id": "user_michal",
+      "decision": "executed",
+      "reason": "success",
+      "attempts": 1,
+      "status": "ok",
+      "latency_ms": 0.05
+    }
+  ],
+  "final_response": "אתה משלם כיום 250.00 ש״ח בחודש עבור Holmes Place Gym. במקור internal_synthetic_catalog_v1 נמצאה חלופה משתלמת יותר: Profit Gym במחיר 150.00 ש״ח בחודש (חדר כושר בפריסה ארצית ללא התחייבות). מעבר יחסוך לך 100.00 ש״ח בחודש ו-1200.00 ש״ח בשנה (חושב באמצעות calculate_expenses). האם תרצה שאעדכן את רשימת המנויים שלך?"
+}

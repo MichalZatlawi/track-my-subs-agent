@@ -1,0 +1,18 @@
+date,merchant,amount,currency
+2026-08-05,Netflix,69.90,ILS
+2026-09-05,Netflix,69.90,ILS
+2026-10-05,Netflix,69.90,ILS
+2026-08-10,Holmes Place Gym,250.00,ILS
+2026-09-10,Holmes Place Gym,250.00,ILS
+2026-10-10,Holmes Place Gym,250.00,ILS
+2026-08-12,Apple,40.00,ILS
+2026-09-12,Apple,40.00,ILS
+2026-10-12,Apple,40.00,ILS
+2026-08-15,Spotify,21.90,ILS
+2026-09-15,Spotify,21.90,ILS
+2026-10-15,Spotify,21.90,ILS
+2026-09-18,Super-Pharm,134.50,ILS
+2026-10-02,Aroma Coffee,28.00,ILS
+2026-08-20,MySubs,50.00,ILS
+2026-09-20,MySubs,50.00,ILS
+2026-10-20,MySubs,50.00,ILS
