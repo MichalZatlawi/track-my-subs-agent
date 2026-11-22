@@ -5,7 +5,7 @@
 **מרצה:** מר סאלח אבו שאהין  
 **מועד הגשה:** 02.12.2026  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/track-my-subs-agent/blob/main/track_my_subs_milestone1.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MichalZatlawi/track-my-subs-agent/blob/main/track_my_subs_milestone1.ipynb)
 
 > **שימו לב לפני הגשה:** החליפו את `YOUR_USERNAME` בקישור ה-Open in Colab למעלה ובמשתנה `REPO_URL` במחברת בשם המשתמש שלכן ב-GitHub.
 
